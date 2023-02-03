@@ -27,7 +27,7 @@ char *readFile(const char *filepath/*, char *dest*/)
 	fseek(fd, 0, SEEK_SET);
 
 	// retrieve file data
-	char *filedata = malloc(999);
+	char *filedata = malloc(fd_size);
 	fread(filedata, 1, fd_size, fd);
 
 	fclose(fd);
